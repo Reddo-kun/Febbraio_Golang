@@ -27,10 +27,8 @@ func inserimentoStringa() []string {
 	var text string
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
-		if scanner.Text() == "end" {
-			break
-		} //Break out of input loop when the user types the word "end"
-		text = scanner.Text()
+		textLocale := scanner.Text()
+		text += textLocale + "\n"
 		slice = append(slice, text)
 	}
 	return slice
@@ -65,9 +63,7 @@ func letterecont(lettere string) {
 		cont := 0
 		cont = strings.Count(lettere, K)
 		if cont > 0 {
-			//fmt.Println(K, strings.Repeat("*", cont))
 			fmt.Println(K, "--->", cont)
-
 		}
 		lettere = removeCharacters(lettere, K)
 	}
