@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	fmt.Println("Inserisci la stringa - per uscire scrivi 'end' (puoi andare a capo)")
+	fmt.Println("Inserisci la stringa - Cntrl+Z per finire")
 	slice := inserimentoStringa()
 	//Trasformo la slice in una stringa con strings.Join
 	line := strings.Join(slice, "")
