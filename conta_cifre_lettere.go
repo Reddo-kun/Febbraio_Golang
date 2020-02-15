@@ -24,12 +24,17 @@ func main() {
 }
 func inserimentoStringa() []string {
 	var slice []string
-	var text string
+	//var text string
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
+
 		textLocale := scanner.Text()
-		text += textLocale + "\n"
-		slice = append(slice, text)
+		slice = append(slice, textLocale)
+		//text += textLocale + "\n"
+		/*if textLocale == "end" {
+			break
+		}*/
+
 	}
 	return slice
 }
